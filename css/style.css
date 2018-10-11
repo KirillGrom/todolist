@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+*{
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+
+}
+button {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.app{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: #F4F4F4   ;
+}
+
+.todo{
+    width: 700px;
+
+    margin: auto;
+    background-color: #ffffff;
+    box-shadow: 3px 10px 30px #cccccc;
+}
+
+.todo__insert{
+    display: flex;
+    align-items: center;
+}
+.button {
+    display: block;
+    width: 10%;
+    height: 70px;
+    text-indent: -1000px;
+    font-size: 0px;
+    background-color: #ffffff;
+    background-image: url("../img/down-arrow.svg");
+    background-position: center center;
+    background-size: 35px;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid #c5c5c5;
+}
+.todo__input{
+    display: block;
+    width: 90%;
+    height: 70px;
+    padding-left: 15px;
+    font-size:30px;
+    border: none;
+    border-bottom: 1px solid #c5c5c5;
+}
+.todo__list{
+    max-height:400px;
+    overflow-y: scroll;
+}
+.todo__item{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 20px 10px 20px 90px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #757575;
+}
+.todo__item::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    display: block;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #F3F3F3;
+    border-radius: 50%;
+}
+.todo__item::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 23.4px;
+    transform: translateY(-50%);
+    display: block;
+    visibility: hidden;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background-image: url("../img/checkmark.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all .3s;
+
+
+}
+.todo__item.close{
+    text-decoration: line-through;
+}
+.todo__item.close::after{
+    visibility: visible;
+}
+
+.delet{
+    display: block;
+    width: 30px;
+    height: 30px;
+    font-size: 0;
+    text-indent: -1000px;
+    background-image: url("../img/icon-delet.svg");
+    background-position: center center;
+    background-size: cover;
+    cursor: pointer;
+}
+.todo__sort{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+.sort{
+
+    display: flex;
+    justify-content: center;
+
+}
+.sort__button{
+    margin-right: 15px;
+    padding: 5px;
+    font-size: 20px;
+    color: #C9C9C9;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.sort__button.active{
+    border-color: #E2D1D2;
+}
+.sort__button--margin{
+        margin-right: 0;
+}
+
+
+@media screen and (max-width: 768px){
+    .todo{
+        width: 97%;
+    }
+}
+
+@media screen and (max-width: 580px){
+    .todo{
+        width: 97%;
+    }
+    .todo__sort{
+        flex-direction: column;
+    }
+    .sort{
+        margin: 25px 0;
+    }
+}
+@media screen and (max-width: 320px){
+    .app{
+        align-items: flex-start;
+    }
+    .todo{
+        margin: 20px auto 0px auto;
+    }
+    .button{
+        width: 16%;
+    }
+    .todo__input {
+        width: 84%;
+        font-size: 22px;
+    }
+    .todo__item{
+        font-size: 15px;
+    }
+    .delet {
+        min-width: 30px;
+    }
+}

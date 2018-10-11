@@ -1,0 +1,35 @@
+{
+  "name": "audioplaer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "handlebars-loader": "^1.7.0",
+    "webpack": "^4.10.2",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "devDependencies": {
+    "path": "^0.12.7",
+    "source-map-loader": "^0.2.3",
+    "webpack-cli": "^3.0.1"
+  },
+  "scripts": {
+    "dev": "  webpack-dev-server --mode development --open",
+    "build": "webpack --mode production",
+    "devgit": "webpack --mode development"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KirillGrom/audioplaer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KirillGrom/audioplaer/issues"
+  },
+  "homepage": "https://github.com/KirillGrom/audioplaer#readme",
+  "description": ""
+}
